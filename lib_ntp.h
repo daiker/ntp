@@ -6,7 +6,7 @@
 //#define NTP_SERVER    "time.nist.gov"
 #define NTP_SERVER_DEFAULT_IP    "128.138.141.172"
 
-#define NTP_DEFAULT_SERVER 		"52.84.1.115" //"time.nist.gov" //"192.168.2.166" //"24.56.178.140" //
+#define NTP_DEFAULT_SERVER 		"time.nist.gov" //"192.168.2.166" //"24.56.178.140" //
 #define NTP_DEFAULT_PORT      	123
 #define NTP_DEFAULT_TIMEOUT     3600*5
 #define NTP_DEFAULT_LOG_SIZE	1024		//limit log file size
@@ -21,9 +21,9 @@
 #define FALSE 0
 #endif
 
-#define HY_NTP_LOG_DIR				"/usr/hip_ipcam/"
-#define HY_NTP_LOG_FILE				"ntp_log"	//"/home/daiker/hy_ntp_log"
-#define PARAM_CFG_DIR 				"/usr/hip_ipcam/"				//"/home/daiker/"
+#define HY_NTP_LOG_DIR				"/usr/ntp/"
+#define HY_NTP_LOG_FILE				"ntp_log"
+#define PARAM_CFG_DIR 				"/usr/ntp/"
 #define PARAM_CFG_NAME 				"ntpconfig.ini"
 #define PARAM_NTP_SERVER_TAG 		"ntp_server"
 #define PARAM_NTP_SERVER_PORT 		"ntp_port"

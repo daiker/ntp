@@ -290,6 +290,7 @@ void set_local_time(struct timeval tv)
 //    if (0 != getuid() && 0 != geteuid())
 //        return;
     tv.tv_sec=tv.tv_sec+8*3600;
+
     settimeofday(&tv, NULL);
 }
 

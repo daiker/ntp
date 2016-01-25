@@ -10,7 +10,7 @@
 DAIKER_PATH=../..
 
 #include $(DAIKER_INSTALL_DIR)
-include $(DAIKER_PATH)/m/Rule.make
+#include $(DAIKER_PATH)/m/Rule.make
 
 
 TARGET = $(notdir $(CURDIR))
@@ -20,7 +20,7 @@ VERBOSE = @
 #DAIKER_LIB=$(DAIKER_INSTALL_DIR)/l/libdaiker.a
 INCLUDE_PATH=-I$(DAIKER_INSTALL_DIR)/h
 
-#CROSS_COMPILE=
+CROSS_COMPILE=
 CROSS_COMPILE=arm-hisiv100nptl-linux-
 #CROSS_COMPILE=arm-none-linux-gnueabi-
 
@@ -50,7 +50,6 @@ $(TARGET):	$(OBJFILES) $(DAIKER_LIB)
 	@echo Linking $@ from $^..
 	$(LINK.c) $(INCLUDE_PATH)  -o $@ $^
 
-	@#./qc 192.168.1.100 encode_rtp /tmp/app/encode_rtp
 $(OBJFILES):	%.o: %.c $(HEADERS) $(XDC_CFLAGS)
 	@echo Compiling $@ from $<..
 	$(COMPILE.c) $(INCLUDE_PATH) -o $@ $<
